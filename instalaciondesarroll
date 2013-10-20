@@ -1,0 +1,13 @@
+instalacion 
+sudo apt-get install python-pip
+sudo apt-get install python-virtualenv
+source env_socialace/virt/bin/activate
+
+abrir el seetings.py vi socialace/settings.py (para configurar la bd)
+
+
+
+para la bd de heroku
+
+se busca un url en heroku
+psql "dbname=ddq495k44bug7j host=ec2-54-221-240-24.compute-1.amazonaws.com user=olzpwtinviyzbe password=a20OJ2BESxUF2o15jj8HY_r9Zz port=5432 sslmode=require"
