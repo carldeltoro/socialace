@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='es'>
+	<head>
+	<meta charset='utf-8'>
+	<title>SOCIAL ACE- {% block titulo%}{% endblock%}</title>
+	<style>
+		{% block style_css %}{% endblock %}
+	</style>
+	</head>
+	<body>
+		<header>
+		{% block encabezado %}{% endblock%}
+		<nav>
+			<table>
+				<tr>
+				<td><a href='/'>Inicio</a></td>
+				<td><a href='/usuarios'>Usuarios registrados</a></td>
+				<td><a href='/recetas'>Recetas</a></td>
+				<td><a href='/sobre'>sobre</a></td>
+				<td><a href='/contacto'>Contactanos</a></td>
+				</tr>
+			</table>
+		</nav>
+	</header>
+	<section class='contenido'>
+		{% block contenido%}{% endblock%}
+	</section>
+	<footer>
+		<p>Proyecto de ejemplo</p>
+	</footer>
+	</body>
+</html>
