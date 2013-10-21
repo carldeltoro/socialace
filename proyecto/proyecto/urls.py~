@@ -1,0 +1,18 @@
+from django.conf.urls import patterns, include, url
+from django.contrib import admin
+from django.conf import settings
+admin.autodiscover()
+
+urlpatterns = patterns('',
+    # Examples:
+    url(r'^$', 'appproyecto.views.inicio'),
+    url(r'^facebook/$', 'appproyecto.views.loginfacebook'),
+    url(r'^registro/$', 'appproyecto.views.registrousuario'),
+    # url(r'^proyecto/', include('proyecto.foo.urls')),
+
+    # Uncomment the admin/doc line below to enable admin documentation:
+    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+
+    # Uncomment the next line to enable the admin:
+     url(r'^admin/', include(admin.site.urls)),
+)
