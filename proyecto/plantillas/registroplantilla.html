@@ -1,26 +1,15 @@
 {% extends 'base.html'%}
 {% block contenido%}
-<link rel="stylesheet" type="text/css" href='{{STATIC_URL}}style.css'>
-<link rel="stylesheet" type="text/css" href='{{STATIC_URL}}font/css/fontello.css'>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}style.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}font/css/fontello.css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700' rel='stylesheet' type='text/css'>
 <div class="section" id="section2">
   <div class="signup-form">
-<table>
-        <tbody>
-	<form id='formulario' method='post' enctype='multipart/form-data' action=''>{% csrf_token %}
-	   {% for field in formulario %}
-		<tr>
-                    <th>
-                        <label for="{{ field.usu_nombre }}">{{ field.label }}</label>
-                    </th>
-                    <td>
-                       {{ field }}
-                    </td>
-                </tr>
-	    {% endfor %}
-	<p><input type='submit' value='confirmar'/></p>
-       </tbody>
-    </table>
+    <h1>Registro en Segundos!</h1>
+    <p> social ace</p>
+	<form class="form-wrapper-01" id='formulario' method='post' enctype='multipart/form-data' action=''>{% csrf_token %}
+		{{formulario.as_p}}
+	<p><input class="button" type='submit' value='confirmar'><i class="icon-paper-plane"></i></input></p>
 </div>
 </div>
 {% endblock %}
