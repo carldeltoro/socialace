@@ -19,6 +19,7 @@ class registroForm(ModelForm):
         usu_fechanacimiento = forms.CharField(label='', max_length=20,widget=forms.TextInput(attrs={'placeholder':'Fecha Nacimiento', 'class':'inputbox name','id':'datepicker'}))
         usu_privacidad = forms.ChoiceField(label='Privacidad',widget=forms.RadioSelect, choices=CHOICES)
 
+        #usu_privacidad = forms.CharField(label='', max_length=20,widget=forms.TextInput(attrs={'placeholder':'privacidad', 'class':'inputbox name'}))
 	class Meta:
 		model = usuario
 		
@@ -27,9 +28,3 @@ class LoginForm(forms.Form):
 	usuario = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'usuario', 'class':'input-normal required usuario'}),label='usuario')
 	password = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'password', 'class':'input-normal required password'}),label='password')
 
-	
-	
-	
-	
-	
-	
