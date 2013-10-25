@@ -1,0 +1,15 @@
+  1 #coding=utf-8
+ 2 from functools import wraps
+ 4 from django.utils.timezone import utc
+ 5
+ 6 def get_user_lazy(func):
+ 7     """
+ 8     Get an user from a lazy object
+ 9     """
+10     from django.contrib.auth import get_user
+11
+12     def _wrap(request, *args, **kwargs):
+13         request.user = get_user(request)
+14         return func(request, *args, **kwargs)
+15     return _wrap
+16 

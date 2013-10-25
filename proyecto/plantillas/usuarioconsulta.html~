@@ -1,0 +1,52 @@
+{% extends 'registro_principal.html'%}
+{% block contenido%}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Flat UI Login Form With Horizontal Scroll Effect</title>
+<meta name="description" content="Beautiful flat UI login form with horizontal scroll effect" />
+<meta name="keywords" content="flat, flat ui, flat design, login form, horizontal scroll" />
+<meta name="author" content="Dzyngiri" />
+<link rel="stylesheet" type="text/css" href="prueba.css" />
+<link rel="stylesheet" type="text/css" href="font/css/fontello.css" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}usuarioconsulta.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}font/css/fontello.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700' rel='stylesheet' type='text/css'>
+<!--Login Section-->
+<div class="section" id="section1">
+  <div class="login-form">
+    <h1>Datos usuario</h1>
+    <p><a href="#" class="button">Cambiar Foto <i class="icon-paper-plane"></i></a></p>
+    <div>
+      <form class="form-wrapper-01">
+        <input id="" class="inputbox email" type="text" placeholder="Email id" />
+        <input id="" class="inputbox password" type="password" placeholder="Password" />
+        <p><a href="#" class="button">Login <i class="icon-paper-plane"></i></a></p>
+      </form>
+    </div>
+    <hr />
+  </div>
+</div>
+<!--END: Login Section-->
+<!--Signup Section-->
+<div class="section2" id="section2">
+  <div class="signup-form">
+    <h1>Datos usuario</h1>
+    <div>
+      <form class="form-wrapper-01">
+        <input id="" class="inputbox name" type="text" placeholder="Your Name" />
+        <input id="" class="inputbox email" type="text" placeholder="Email id" />
+        <input id="" class="inputbox password" type="password" placeholder="Password" />
+        <input id="" class="inputbox password" type="password" placeholder="Confirm Password" />
+        <p><a href="#" class="button">Create my Account <i class="icon-paper-plane"></i></a></p>
+        <!--<input id="" type="button" class="button" value="Sign up" />-->
+      </form>
+    </div>
+    <hr />
+</div>
+<!--END: Signup Section-->
+{% endblock %}

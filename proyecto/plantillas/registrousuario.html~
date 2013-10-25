@@ -1,0 +1,27 @@
+{% extends 'registro_principal.html'%}
+{% block contenido%}
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}registro.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}font/css/fontello.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      yearRange: "1900:2012",
+    });
+  });
+  </script>
+<div class="section" id="section2">
+  <div class="signup-form">
+    <h4>Registro en Segundos!</h4>
+    <p> social ace</p>
+	<form class="form-wrapper-01" id='formulario' method='post' enctype='multipart/form-data' action=''>{% csrf_token %}
+		{{formulario.as_table}}
+	<p><input class="button" type='submit' value='confirmar'><i class="icon-paper-plane"></i></input></p>
+</div>
+</div>
+{% endblock %}

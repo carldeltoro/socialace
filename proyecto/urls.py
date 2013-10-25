@@ -1,18 +1,22 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
+from appproyecto.forms import LoginForm
+from django.contrib.auth.views import login
 admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'appproyecto.views.inicio'),
-    url(r'^facebook/$', 'appproyecto.views.loginfacebook'),
-    url(r'^registro/$', 'appproyecto.views.nuevo_usuario'),
+    url(r'login/$',login, {'template_name':'login_principal.html', 'authentication_form':LoginForm}, name='login'),    
+    
+    url(r'^registro/$', 'appproyecto.views.nuevo_usuario', name='usuarioNuevoRegistro'),
+    url(r'^dash/$', name='dash'),
+    url(r'^inicio/$', 'appproyecto.views.principalinicio', name='principalinicio'),
+    url(r'^usuario/consulta/(?P<id_usuario>\d+)$', 'appproyecto.views.usuario_consulta'),    
     # url(r'^proyecto/', include('proyecto.foo.urls')),
-
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
     # Uncomment the next line to enable the admin:
      url(r'^admin/', include(admin.site.urls)),
 )

@@ -1,0 +1,61 @@
+{% extends 'registro_principal.html'%}
+{% block contenido%}
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}usuario_consulta.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}font/css/fontello.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700' rel='stylesheet' type='text/css'>
+<!--Login Section-->
+<div class="section" id="section1">
+  <div class="login-form">
+    <h4>{{usuario.usu_nombre}}</h4>
+    <img id="imagen" src='{{MEDIA_URL}}imagenusuario/{{usuario.usu_foto}}' />
+    <p><a href="#" class="button">Cambiar Foto <i class="icon-paper-plane"></i></a></p>
+    <div>
+      <div class="form-wrapper-01">
+        <input id="" class="inputbox name" type="text" placeholder="Albumes" />
+        <input id="" class="inputbox name" type="text" placeholder="Amigos" />
+      </div>
+    </div>
+    <hr />
+  </div>
+</div>
+<!--END: Login Section-->
+<!--Signup Section-->
+<div class="section" id="section2">
+  <div class="signup-form">
+    <h4>Datos usuario</h4>
+    <div>
+      <div class="form-wrapper-01">
+       <label for="apellido">Apellido</label>	
+        <input id="" class="inputbox name" type="text" placeholder="{{usuario.usu_apellido}}"readonly="readonly" />
+        <br>
+       <label for="nombre_usuario">Nombre Usuario</label>	
+        <input id="" class="inputbox email" type="text" placeholder="{{usuario.usu_nombreUsuario}}" readonly="readonly"/>
+        <br>
+       <label for="email">email</label>	
+        <input id="" class="inputbox email" type="text" placeholder="{{usuario.usu_correo}}" readonly="readonly" />
+        <br>
+       <label for="fecha_nac">Fecha de Nacimiento</label>	
+        <input id="" class="inputbox name" type="password" placeholder="{{usuario.usu_fechanacimiento}}"readonly="readonly" />
+        <br>
+       <label for="ubicacion">Ubicacion</label>	
+        <input id="" class="inputbox name" type="password" placeholder="{{usuario.usu_direccion}}" readonly="readonly"/>
+        <br>
+    	<hr/>	
+        <label for="enlace">Redes Sociales</label>
+        <br>
+       <label for="ubicacion">Google +</label>	
+        <input id="" class="inputbox email" type="text" placeholder="{{usuario.usu_google}}"readonly="readonly"/>
+        <br>
+       <label>Twitter</label>	
+        <input id="" class="inputbox email" type="text" placeholder="{{usuario.usu_twitter}}" readonly="readonly"/>
+        <br>
+       <label>facebook</label>	
+        <input id="" class="inputbox email" type="text" placeholder="{{usuario.usu_facebook}}"readonly="readonly"/>
+        <br>
+        <!--<input id="" type="button" class="button" value="Sign up" />-->
+      </div>
+    </div>
+    <hr />
+</div>
+<!--END: Signup Section-->
+{% endblock %}

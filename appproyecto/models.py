@@ -59,8 +59,8 @@ class youtube(models.Model):
 class album(models.Model):
 	alb_nombre		    = models.CharField(max_length=100)
 	alb_descripcion		= models.CharField(max_length=200)
-	alb_privacidad		= models.CharField(max_length=200)
-	alb_foto		    = models.BooleanField(default=True)
+	alb_privacidad		= models.BooleanField(default= True)
+	alb_foto		    = models.ImageField(upload_to='imagenalbum')
 	alb_fkusuario		= models.ForeignKey(usuario)
 	alb_fkcalendario	= models.ForeignKey(calendario)
 

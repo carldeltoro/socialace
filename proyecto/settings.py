@@ -59,7 +59,7 @@ MEDIA_ROOT = os.path.join(RUTA_PROYECTO,'carga')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = 'http://127.0.0.1:8000/media/'
+MEDIA_URL = ''
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -111,6 +111,8 @@ ROOT_URLCONF = 'proyecto.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'proyecto.wsgi.application'
+
+LOGIN_REDIRECT_URL ='dash'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
